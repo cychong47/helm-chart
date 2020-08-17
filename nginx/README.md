@@ -3,8 +3,9 @@ Deploy nginx with helm
 
 # How to use 
 
-## Declare PV
-Create a file `nginx-pv.yaml` and change the `path`
+## Declare Persistent Volume(PV)
+
+Create a file `nginx-pv.yaml` and change the `path` to where the html files for web-site are located
 
 ```
 kind: PersistentVolume
@@ -31,6 +32,20 @@ persistentvolume/nginx-pv created
 $ kubectl get pv
 NAME       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
 nginx-pv   12Gi       RWO            Retain           Available           manual                  8s
+```
+
+## Change the Port in `values.yaml`  
+This service uses NodePort (no loader balancer is avaliable)
+Change the IP address and TCP port for the service.
+
+```
+service:
+  type: NodePort
+  targetPort: 80		# container app. itself
+  port: 8099			# pod
+  nodePort: 8099		# cluster-wise
+  externalTrafficPolicy: Local
+  externalIPs: [192.168.1.100]
 ```
 
 ## Install chart with helm 

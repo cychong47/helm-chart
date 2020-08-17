@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: sosa0sa-pv
+  labels:
+    type: local
+spec:
+  storageClassName: sosa0sa-pv-class
+  capacity:
+    storage: 12Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/cychong/Documents/sosa0sa"

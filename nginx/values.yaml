@@ -38,7 +38,8 @@ ingress:
 
 persistence:
   enabled: true
-  storageClassName: manual
+  pvcName: nginx-pvc
+  storageClassName: nginx-pv-class
   accessMode: ReadWriteOnce
   size: 10Gi
 

@@ -2,13 +2,11 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: nginx-pvc
+  name: {{ .Values.persistence.pvcName | quote }}
   labels:
     type: local
 spec:
-        #  storageClassName: 
-        #    - {{ .Values.persistence.storageClassName }}
-  storageClassName: manual
+  storageClassName: {{ .Values.persistence.storageClassName | quote }}
   accessModes: 
     - {{ .Values.persistence.accessMode | quote }}
   resources:

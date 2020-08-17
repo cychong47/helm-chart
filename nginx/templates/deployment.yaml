@@ -45,7 +45,7 @@ spec:
       volumes:
         - name: nginx-content
           persistentVolumeClaim:
-            claimName: nginx-pvc
+            claimName: {{ .Values.persistence.pvcName | quote }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

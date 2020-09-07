@@ -1,11 +1,21 @@
 apiVersion: v1
 entries:
+  my-ghost:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-09-07T21:29:59.12354973+09:00"
+    description: A Helm chart for ghost
+    digest: 9e8905399114cd3f8c45392fb7e716916379ad80eb366f466396722afdd6329b
+    name: my-ghost
+    urls:
+    - https://cychong47.github.io/helm-chart/my-ghost-0.1.0.tgz
+    version: 0.1.0
   nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-08-18T15:11:16.204523175+09:00"
+    created: "2020-09-07T21:29:59.124928723+09:00"
     description: A Helm chart for nginx
-    digest: 13ca2e931085a7c6f79c792ba8d8e397d2a30db7b712099b05faf49dbae906ab
+    digest: 35b0caf13ee8f29a942de4994b4c43cc32adeef8ea7cd2273d779fde965e25ee
     maintainers:
     - email: cychong@gmail.com
       name: Chaeyong Chong
@@ -13,4 +23,4 @@ entries:
     urls:
     - https://cychong47.github.io/helm-chart/nginx-0.2.0.tgz
     version: 0.2.0
-generated: "2020-08-18T15:11:16.203148468+09:00"
+generated: "2020-09-07T21:29:59.122168178+09:00"

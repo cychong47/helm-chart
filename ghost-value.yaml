@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  registry: docekr.io
+  registry: docker.io
   repository: ghost
   tag: 2.31.0
   pullPolicy: Always

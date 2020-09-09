@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  registry: docekr.io
+  registry: docker.io
   repository: nginx
   tag: 1.19.0
   pullPolicy: Always

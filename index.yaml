@@ -3,9 +3,9 @@ entries:
   ghost:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-10T11:25:52.897235369+09:00"
+    created: "2020-09-10T11:33:08.435112034+09:00"
     description: A Helm chart for ghost
-    digest: c389101da946925a75e0901fdc4d22920830cde56222c19b47218f105cf02449
+    digest: 37fc3929b710e05124248739364590b4c4a895751ba369ea3a0f2f6f262b0069
     name: ghost
     urls:
     - https://cychong47.github.io/helm-chart/ghost-0.1.0.tgz
@@ -13,9 +13,9 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-10T11:25:52.898483289+09:00"
+    created: "2020-09-10T11:33:08.436366585+09:00"
     description: A Helm chart for nginx
-    digest: 5228c62cdf405c845a39eea32018af9fd5dd79a72eada9c05bfc6a8fd80c6cc5
+    digest: 084442694989f7080b792c97e2e35d86cc92fbe91aa72bcc63a8ad46987a7cb9
     maintainers:
     - email: cychong@gmail.com
       name: Chaeyong Chong
@@ -26,7 +26,17 @@ entries:
   slackbot:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-10T11:25:52.900856655+09:00"
+    created: "2020-09-10T11:33:08.443002809+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 921dc37c8920c9472748f93585091cf8969f330e32a3a606eaf3ffd6061529b7
+    name: slackbot
+    type: application
+    urls:
+    - https://cychong47.github.io/helm-chart/slackbot-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-09-10T11:33:08.4416831+09:00"
     description: A Helm chart for Kubernetes
     digest: cdcc32b9537c457b3659f2450f00f871808523085f2bf7978e7e4cadf810390c
     name: slackbot
@@ -36,7 +46,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-10T11:25:52.899641493+09:00"
+    created: "2020-09-10T11:33:08.440344671+09:00"
     description: A Helm chart for Kubernetes
     digest: c91e2337baf84b8b0749b7ca3a3aa60320a1e8ebe4f5d8f9970191261c33086e
     name: slackbot
@@ -44,4 +54,4 @@ entries:
     urls:
     - https://cychong47.github.io/helm-chart/slackbot-0.1.0.tgz
     version: 0.1.0
-generated: "2020-09-10T11:25:52.89591941+09:00"
+generated: "2020-09-10T11:33:08.432547493+09:00"

@@ -3,9 +3,9 @@ entries:
   ghost:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-10T10:15:09.421993092+09:00"
+    created: "2020-09-10T10:24:36.166387938+09:00"
     description: A Helm chart for ghost
-    digest: d1436d16350a0d589a68b7280473737dd1e19dad6ab67fd7a1d96e6a6db7ad7a
+    digest: 28e468afe02646499117a3805f39b11fe57d4c99a5c21c6e1c38f2ce77f961ea
     name: ghost
     urls:
     - https://cychong47.github.io/helm-chart/ghost-0.1.0.tgz
@@ -13,9 +13,9 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-10T10:15:09.423203407+09:00"
+    created: "2020-09-10T10:24:36.167639557+09:00"
     description: A Helm chart for nginx
-    digest: 4aa2277e41403c7ad3106ab8a94192a4dea744f783213ced7f4b9be84f126f18
+    digest: 45accbf7fc9fab670c71e71a73d3e26c416f649ac98f7ae699679982a0a16315
     maintainers:
     - email: cychong@gmail.com
       name: Chaeyong Chong
@@ -26,7 +26,17 @@ entries:
   slackbot:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-10T10:15:09.424286008+09:00"
+    created: "2020-09-10T10:24:36.169819929+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 9ffc8a1366a3e678f1a6fb5b591e1859b23c1ae07d2ed161e8be9466320144eb
+    name: slackbot
+    type: application
+    urls:
+    - https://cychong47.github.io/helm-chart/slackbot-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-09-10T10:24:36.168709384+09:00"
     description: A Helm chart for Kubernetes
     digest: c91e2337baf84b8b0749b7ca3a3aa60320a1e8ebe4f5d8f9970191261c33086e
     name: slackbot
@@ -34,4 +44,4 @@ entries:
     urls:
     - https://cychong47.github.io/helm-chart/slackbot-0.1.0.tgz
     version: 0.1.0
-generated: "2020-09-10T10:15:09.420560184+09:00"
+generated: "2020-09-10T10:24:36.165046844+09:00"

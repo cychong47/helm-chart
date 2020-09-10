@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "my-ghost-helm.fullname" . }}
+  name: {{ include "ghost-helm.fullname" . }}
   labels:
-{{ include "my-ghost-helm.labels" . | indent 4 }}
+{{ include "ghost-helm.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
   externalTrafficPolicy : {{ .Values.service.externalTrafficPolicy }}
@@ -14,5 +14,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "my-ghost-helm.name" . }}
+    app.kubernetes.io/name: {{ include "ghost-helm.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

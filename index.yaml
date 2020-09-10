@@ -1,21 +1,21 @@
 apiVersion: v1
 entries:
-  my-ghost:
+  ghost:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-09T23:47:16.646390063+09:00"
+    created: "2020-09-10T10:15:09.421993092+09:00"
     description: A Helm chart for ghost
-    digest: 90c66a8f9bde7d004edf8ce26766b4d226d2e3a0f747fad14dd8b21f9a4853fa
-    name: my-ghost
+    digest: d1436d16350a0d589a68b7280473737dd1e19dad6ab67fd7a1d96e6a6db7ad7a
+    name: ghost
     urls:
-    - https://cychong47.github.io/helm-chart/my-ghost-0.1.0.tgz
+    - https://cychong47.github.io/helm-chart/ghost-0.1.0.tgz
     version: 0.1.0
   nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-09T23:47:16.647659138+09:00"
+    created: "2020-09-10T10:15:09.423203407+09:00"
     description: A Helm chart for nginx
-    digest: 6014bf050c15dedab187e24325a9515f5bc3a5ba7a7d0f7f89456a690407ff0d
+    digest: 4aa2277e41403c7ad3106ab8a94192a4dea744f783213ced7f4b9be84f126f18
     maintainers:
     - email: cychong@gmail.com
       name: Chaeyong Chong
@@ -26,12 +26,12 @@ entries:
   slackbot:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-09T23:47:16.648921574+09:00"
+    created: "2020-09-10T10:15:09.424286008+09:00"
     description: A Helm chart for Kubernetes
-    digest: 4f03ba444798381b0f1adf4091223624f8967792c1d2aadf6bea13ef8d527272
+    digest: c91e2337baf84b8b0749b7ca3a3aa60320a1e8ebe4f5d8f9970191261c33086e
     name: slackbot
     type: application
     urls:
     - https://cychong47.github.io/helm-chart/slackbot-0.1.0.tgz
     version: 0.1.0
-generated: "2020-09-09T23:47:16.644956113+09:00"
+generated: "2020-09-10T10:15:09.420560184+09:00"

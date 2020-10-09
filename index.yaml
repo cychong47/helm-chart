@@ -3,9 +3,9 @@ entries:
   ghost:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-10T11:33:08.435112034+09:00"
+    created: "2020-10-09T23:22:27.016879914+09:00"
     description: A Helm chart for ghost
-    digest: 37fc3929b710e05124248739364590b4c4a895751ba369ea3a0f2f6f262b0069
+    digest: bfe0e16185cfa1ae96f4e66db4ad58204bbcf4851c1bd1fbea92ec53cd64c4e8
     name: ghost
     urls:
     - https://cychong47.github.io/helm-chart/ghost-0.1.0.tgz
@@ -13,9 +13,9 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-10T11:33:08.436366585+09:00"
+    created: "2020-10-09T23:22:27.01818275+09:00"
     description: A Helm chart for nginx
-    digest: 084442694989f7080b792c97e2e35d86cc92fbe91aa72bcc63a8ad46987a7cb9
+    digest: f59e1b39177dd656489d687083840d9a32f92ba0ad03e7836bd4aae2785643be
     maintainers:
     - email: cychong@gmail.com
       name: Chaeyong Chong
@@ -23,12 +23,23 @@ entries:
     urls:
     - https://cychong47.github.io/helm-chart/nginx-0.2.0.tgz
     version: 0.2.0
+  pocket-stat:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-10-09T23:22:27.019362509+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 01fd4b831d5e7233df39208a6a784b3a2fa0478bb1031149a96ff0c2b7849ce9
+    name: pocket-stat
+    type: application
+    urls:
+    - https://cychong47.github.io/helm-chart/pocket-stat-0.1.0.tgz
+    version: 0.1.0
   slackbot:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-10T11:33:08.443002809+09:00"
+    created: "2020-10-09T23:22:27.024166344+09:00"
     description: A Helm chart for Kubernetes
-    digest: 921dc37c8920c9472748f93585091cf8969f330e32a3a606eaf3ffd6061529b7
+    digest: ae999bbb7161a95027369c90862190e25578b0d7a2cd3adf9fdae3e986c4f3a3
     name: slackbot
     type: application
     urls:
@@ -36,7 +47,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-10T11:33:08.4416831+09:00"
+    created: "2020-10-09T23:22:27.022873229+09:00"
     description: A Helm chart for Kubernetes
     digest: cdcc32b9537c457b3659f2450f00f871808523085f2bf7978e7e4cadf810390c
     name: slackbot
@@ -46,7 +57,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-09-10T11:33:08.440344671+09:00"
+    created: "2020-10-09T23:22:27.021142408+09:00"
     description: A Helm chart for Kubernetes
     digest: c91e2337baf84b8b0749b7ca3a3aa60320a1e8ebe4f5d8f9970191261c33086e
     name: slackbot
@@ -54,4 +65,4 @@ entries:
     urls:
     - https://cychong47.github.io/helm-chart/slackbot-0.1.0.tgz
     version: 0.1.0
-generated: "2020-09-10T11:33:08.432547493+09:00"
+generated: "2020-10-09T23:22:27.015466003+09:00"

@@ -1,0 +1,71 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "pocket-stat.fullname" . }}
+spec:
+  template:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "pocket-stat.selectorLabels" . | nindent 8 }}
+    spec:
+      restartPolicy: OnFailure
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "pocket-stat.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name : INFLUXDB_HOST
+              value : {{ .Values.env.influxdb_host }}
+            - name : INFLUXDB_PORT
+              value : "{{ .Values.env.influxdb_port }}"
+            - name : POCKET_CONSUMER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.env.secret_name }}
+                  key: pocket_consumer_key
+            - name : POCKET_ACCESS_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.env.secret_name }}
+                  key: pocket_access_token
+            - name : TZ
+              value : {{ .Values.env.tz }}
+          ports:
+            - name: http
+              containerPort: 32769
+              protocol: TCP
+              #         livenessProbe:
+              #           httpGet:
+              #             path: /
+              #             port: http
+              #         readinessProbe:
+              #           httpGet:
+              #             path: /
+              #             port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

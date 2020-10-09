@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "pocket-stat.fullname" . }}-test-connection"
+  labels:
+    {{- include "pocket-stat.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "pocket-stat.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

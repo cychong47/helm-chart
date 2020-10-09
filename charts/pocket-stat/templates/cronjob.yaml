@@ -1,0 +1,74 @@
+{{- if ne .Values.schedule "now" -}}
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "pocket-stat.fullname" . }}
+spec:
+  schedule: "{{ .Values.schedule }}"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+        {{- with .Values.podAnnotations }}
+          annotations: {{- toYaml . | nindent 12 }}
+        {{- end }}
+          labels: {{- include "pocket-stat.selectorLabels" . | nindent 12 }}
+        spec:
+          restartPolicy: OnFailure
+          {{- with .Values.imagePullSecrets }}
+          imagePullSecrets:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          serviceAccountName: {{ include "pocket-stat.serviceAccountName" . }}
+          securityContext:
+            {{- toYaml .Values.podSecurityContext | nindent 12 }}
+          containers:
+            - name: {{ .Chart.Name }}
+              securityContext:
+                {{- toYaml .Values.securityContext | nindent 16 }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              env:
+                - name : INFLUXDB_HOST
+                  value : {{ .Values.env.influxdb_host }}
+                - name : INFLUXDB_PORT
+                  value : "{{ .Values.env.influxdb_port }}"
+                - name : POCKET_CONSUMER_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ .Values.env.secret_name }}
+                      key: pocket_consumer_key
+                - name : POCKET_ACCESS_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ .Values.env.secret_name }}
+                      key: pocket_access_token
+                - name : TZ
+                  value : {{ .Values.env.tz }}
+              ports:
+                - name: http
+                  containerPort: 32769
+                  protocol: TCP
+                  #         livenessProbe:
+                  #           httpGet:
+                  #             path: /
+                  #             port: http
+                  #         readinessProbe:
+                  #           httpGet:
+                  #             path: /
+                  #             port: http
+              resources:
+                {{- toYaml .Values.resources | nindent 16 }}
+          {{- with .Values.nodeSelector }}
+          nodeSelector:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.tolerations }}
+          tolerations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+{{ end }}

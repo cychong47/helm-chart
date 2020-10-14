@@ -29,20 +29,27 @@ spec:
               image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
               imagePullPolicy: {{ .Values.image.pullPolicy }}
               env:
-                - name : INFLUXDB_HOST
-                  value : {{ .Values.env.influxdb_host }}
-                - name : INFLUXDB_PORT
-                  value : "{{ .Values.env.influxdb_port }}"
-                - name : POCKET_CONSUMER_KEY
+                - name: INFLUXDB_HOST
+                  value: {{ .Values.env.influxdb_host }}
+                - name: INFLUXDB_PORT
+                  value: "{{ .Values.env.influxdb_port }}"
+                - name: POCKET_CONSUMER_KEY
                   valueFrom:
                     secretKeyRef:
                       name: {{ .Values.env.secret_name }}
                       key: pocket_consumer_key
-                - name : POCKET_ACCESS_TOKEN
+                - name: POCKET_ACCESS_TOKEN
                   valueFrom:
                     secretKeyRef:
                       name: {{ .Values.env.secret_name }}
                       key: pocket_access_token
+                - name: SLACK_EVENTS_TOKEN
+                  valueFrom:
+                    secretKeyRef:
+                      name: {{ .Values.env.secret_name }}
+                      key: slack_events_token
+                - name : SLACK_CHANNEL
+                  value : {{ .Values.env.slack_channel }}
                 - name : TZ
                   value : {{ .Values.env.tz }}
               ports:

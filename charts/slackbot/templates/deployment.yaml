@@ -35,13 +35,25 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name : SLACK_API_TOKEN
-              value : {{ .Values.env.slack_api_token }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.env.secret_name }}
+                  key: slack_api_token
             - name : SLACK_EVENTS_TOKEN
-              value : {{ .Values.env.slack_events_token }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.env.secret_name }}
+                  key: slack_events_token
             - name : SLACK_SIGNING_SECRET
-              value : {{ .Values.env.slack_signing_secret }}
-            - name : VERIFICATION_TOKEN
-              value : {{ .Values.env.verification_token }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.env.secret_name }}
+                  key: slack_signing_secret
+            - name : SLACK_VERIFICATION_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.env.secret_name }}
+                  key: slack_verification_token
             - name : TZ
               value : {{ .Values.env.tz }}
           ports:

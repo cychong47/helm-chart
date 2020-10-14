@@ -42,11 +42,11 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.env.secret_name }}
                   key: pocket_access_token
-            - name: SLACK_EVENTS_TOKEN
+            - name: SLACK_API_TOKEN
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.env.secret_name }}
-                  key: slack_events_token
+                  key: slack_api_token
             - name : SLACK_CHANNEL
               value : {{ .Values.env.slack_channel }}
             - name : TZ

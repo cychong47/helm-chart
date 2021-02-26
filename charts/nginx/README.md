@@ -45,7 +45,7 @@ service:
   port: 8099			# pod
   nodePort: 8099		# cluster-wise
   externalTrafficPolicy: Local
-  externalIPs: [192.168.1.100]
+  externalIPs: [192.168.0.100]
 ```
 
 ## Install chart with helm 

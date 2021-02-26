@@ -19,7 +19,7 @@ service:
   port: 2368
   targetPort: 2368
   externalTrafficPolicy: Local
-  externalIPs: [192.168.1.100]
+  externalIPs: [192.168.0.100]
 
 ingress:
   enabled: false

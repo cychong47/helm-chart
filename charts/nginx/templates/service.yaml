@@ -8,8 +8,8 @@ spec:
   type: {{ .Values.service.type }}
   {{- if eq .Values.service.type "NodePort" }}
   externalTrafficPolicy : {{ .Values.service.externalTrafficPolicy }}
-  {{- end}}
   externalIPs : {{ .Values.service.externalIPs }}
+  {{- end}}
   ports:
     - port: {{ .Values.service.port }}
       {{- if eq .Values.service.type "NodePort" }}

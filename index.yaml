@@ -3,16 +3,6 @@ entries:
   flaresolverr:
   - apiVersion: v2
     appVersion: 2.2.1
-    created: "2022-03-12T23:33:13.934074916+09:00"
-    description: A Helm chart for Kubernetes
-    digest: e11460bf64af80cec576aa439076a8933c7ca23e2a3762387bc63f77183a855a
-    name: flaresolverr
-    type: application
-    urls:
-    - https://cychong47.github.io/helm-chart/flaresolverr-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 2.2.1
     created: "2022-03-12T23:33:13.933186935+09:00"
     description: A Helm chart for Kubernetes
     digest: fa1a14000ad599fcd1355afd016c6c98f3dac274def4f97a74701d89d972f01c

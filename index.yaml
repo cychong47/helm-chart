@@ -3,9 +3,9 @@ entries:
   busybox:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.22494248+09:00"
+    created: "2024-08-27T22:58:36.003844039+09:00"
     description: A Helm chart for Kubernetes
-    digest: 8e94e183f914c32a6a39d2de4e2e4f5628edb09946733c15e76a11a7741f1945
+    digest: bda91d59aeca1073cfdfc1fe4c89a0da5234524988f2d55d60a727c91b2a3c7d
     name: busybox
     type: application
     urls:
@@ -14,9 +14,9 @@ entries:
   dashy:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.225801968+09:00"
+    created: "2024-08-27T22:58:36.004577816+09:00"
     description: A Helm chart for Kubernetes
-    digest: f11019ee15b717f7c91ff82276c1b0231bd40ae32ce4bbf536d2752a65d5bed8
+    digest: bb7f1cdbd80912d5099cbb0fc00b4c6cafc9c0144e64c8cbabf7fc4d7fc8b841
     name: dashy
     type: application
     urls:
@@ -25,9 +25,9 @@ entries:
   flaresolverr:
   - apiVersion: v2
     appVersion: 2.2.1
-    created: "2022-05-15T23:46:24.228813353+09:00"
+    created: "2024-08-27T22:58:36.005320404+09:00"
     description: A Helm chart for Kubernetes
-    digest: 110b94a52963b11be4485a457f3429a1d3d8ce8001e80a7f225e517f4b56a779
+    digest: 3dd3e9ada9f97e3ac6a3d02d25866029c6cb5917ad2876084206b417b8562f9c
     name: flaresolverr
     type: application
     urls:
@@ -36,17 +36,38 @@ entries:
   ghost:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-05-15T23:46:24.229646065+09:00"
+    created: "2024-08-27T22:58:36.006001954+09:00"
     description: A Helm chart for ghost
-    digest: 9a5aafe5ccc9cc40c62849feea5bd1687464efc25e456b0276f921e06c322914
+    digest: 3ad9301b33823123017495063a1f8adee72272cde6288b7f22061d99de913380
     name: ghost
     urls:
     - https://cychong47.github.io/helm-chart/ghost-0.1.0.tgz
     version: 0.1.0
+  icloudpd:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-08-27T22:58:36.007141404+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 5ef90cdd7f49b76a4fc6f47ae1a000a004586cef7de332ebc1b375fbf99ca3dd
+    name: icloudpd
+    type: application
+    urls:
+    - https://cychong47.github.io/helm-chart/icloudpd-0.1.0.tgz
+    version: 0.1.0
   jellyfin:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.232146495+09:00"
+    created: "2024-08-27T22:58:36.01106289+09:00"
+    description: A Helm chart for Kubernetes
+    digest: 786f6b59f8258bb786b4864bd74822b5a34458ea907b3e22e013eeb824d735e1
+    name: jellyfin
+    type: application
+    urls:
+    - https://cychong47.github.io/helm-chart/jellyfin-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-08-27T22:58:36.010297975+09:00"
     description: A Helm chart for Kubernetes
     digest: bb28e59f04ccf23ae215d9efb533d23b22f85eb5878d0f64abe8ea87ea668722
     name: jellyfin
@@ -56,7 +77,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.231321523+09:00"
+    created: "2024-08-27T22:58:36.009204321+09:00"
     description: A Helm chart for Kubernetes
     digest: 6ac07d52464c4576111b3130b250016cd29791a030835686595734c96206a312
     name: jellyfin
@@ -66,7 +87,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.230501035+09:00"
+    created: "2024-08-27T22:58:36.008135075+09:00"
     description: A Helm chart for Kubernetes
     digest: c690cbe67ef394b8b614cf1324ea0861ce359245a552b6e9bb380afcef583530
     name: jellyfin
@@ -77,9 +98,9 @@ entries:
   nginx:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-05-15T23:46:24.235024909+09:00"
+    created: "2024-08-27T22:58:36.016216356+09:00"
     description: A Helm chart for nginx
-    digest: 2dcc96581a7a94e2e9244a329c9783bb5f2e5dab8f17d0181160381277e2b46b
+    digest: c8205ac30afbb6a6cb78c088ae3b0f6f69557840cfd5291f33550ae86f0d0296
     maintainers:
     - email: cychong@gmail.com
       name: Chaeyong Chong
@@ -89,7 +110,7 @@ entries:
     version: 0.3.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-05-15T23:46:24.233324807+09:00"
+    created: "2024-08-27T22:58:36.012289195+09:00"
     description: A Helm chart for nginx
     digest: 632fe8259c5393ef06179a67613bf567c1eac2799d75a4ee1bcf2b854c9e429e
     maintainers:
@@ -102,9 +123,9 @@ entries:
   plantuml-server:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.235956455+09:00"
+    created: "2024-08-27T22:58:36.01764642+09:00"
     description: A Helm chart for Kubernetes
-    digest: 137f0c3065d8a4c15dc189ef89f332d68cc65ce74dc612704f244951452e5060
+    digest: 1522e1a34ab7d11bb9ec607975fcc2ef2742401ed677c53362b03f6fc5e73ec7
     name: plantuml-server
     type: application
     urls:
@@ -113,7 +134,7 @@ entries:
   plex:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.237056454+09:00"
+    created: "2024-08-27T22:58:36.021431812+09:00"
     description: A Helm chart for Kubernetes
     digest: 59429d200d3626c9e4e6068ca1626bdee24a795e2bf95d4d1068b34be309b8d6
     name: plex
@@ -124,9 +145,9 @@ entries:
   pocket-stat:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.23792258+09:00"
+    created: "2024-08-27T22:58:36.022406519+09:00"
     description: A Helm chart for Kubernetes
-    digest: 02b8042569089aa5953d148404ed28e4150153072d6e6a141da8725c4d0d3cae
+    digest: ea8e5faa5d26c775e2b81163d46e5209bbce93f501a89f165f1033ba79c452fe
     name: pocket-stat
     type: application
     urls:
@@ -135,9 +156,9 @@ entries:
   prowlarr:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.238831264+09:00"
+    created: "2024-08-27T22:58:36.02322264+09:00"
     description: A Helm chart for Kubernetes
-    digest: b2db1b4beda8c2deaea94c16d0e76e695451a021a409ff793ce3a38435a38063
+    digest: 949d983fdb30b41485554be011f46a9350501b35e000f9f4ee1e2ad5a3868b23
     name: prowlarr
     type: application
     urls:
@@ -146,9 +167,9 @@ entries:
   radarr:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.239796995+09:00"
+    created: "2024-08-27T22:58:36.02421893+09:00"
     description: A Helm chart for Kubernetes
-    digest: 3b9db4cb332f44a02317fac985c9f12bc7678e62776ad8f2d5315aef145ca4ef
+    digest: abe26f6f3349749fac3265b3703b7839f4d9bf72b1df512a4324dcbf5987f0b8
     name: radarr
     type: application
     urls:
@@ -157,9 +178,9 @@ entries:
   slackbot:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.243076043+09:00"
+    created: "2024-08-27T22:58:36.02818219+09:00"
     description: A Helm chart for Kubernetes
-    digest: 462506f3a090dff36d30a3d09c344a396db1838391189601215683f7cf0c2fac
+    digest: ee262e9b7d1685a285478f7030c293336477e7d621101ff025aa802e75faba05
     name: slackbot
     type: application
     urls:
@@ -167,7 +188,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.242246034+09:00"
+    created: "2024-08-27T22:58:36.027501566+09:00"
     description: A Helm chart for Kubernetes
     digest: 67015469687b67371f67501b8596b897e91a49995884f8b9572e4a7d3c478d44
     name: slackbot
@@ -177,7 +198,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.241435309+09:00"
+    created: "2024-08-27T22:58:36.02649304+09:00"
     description: A Helm chart for Kubernetes
     digest: cdcc32b9537c457b3659f2450f00f871808523085f2bf7978e7e4cadf810390c
     name: slackbot
@@ -187,7 +208,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.240614644+09:00"
+    created: "2024-08-27T22:58:36.025395432+09:00"
     description: A Helm chart for Kubernetes
     digest: c91e2337baf84b8b0749b7ca3a3aa60320a1e8ebe4f5d8f9970191261c33086e
     name: slackbot
@@ -198,9 +219,9 @@ entries:
   transmission:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.24670395+09:00"
+    created: "2024-08-27T22:58:36.030264177+09:00"
     description: A Helm chart for Kubernetes
-    digest: fb2f9ed3ccce8704ef764eeabae2836584a095af1be872566139e381065984a7
+    digest: ad2d1314dbf07415ecdd86c8a49a79e8eaf11c2b629f4809ae9efd31a02fcc6b
     name: transmission
     type: application
     urls:
@@ -208,7 +229,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-15T23:46:24.245133283+09:00"
+    created: "2024-08-27T22:58:36.029265192+09:00"
     description: A Helm chart for Kubernetes
     digest: dc2f85b11a6e5c7ca7433d4529fc6b6bfb15e51864788b90dd88590e057e0dfa
     name: transmission
@@ -216,4 +237,4 @@ entries:
     urls:
     - https://cychong47.github.io/helm-chart/transmission-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-15T23:46:24.223693103+09:00"
+generated: "2024-08-27T22:58:36.002844372+09:00"

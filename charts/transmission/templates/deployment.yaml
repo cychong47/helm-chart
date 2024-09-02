@@ -19,6 +19,9 @@ spec:
       {{- end }}
       labels:
         {{- include "transmission.selectorLabels" . | nindent 8 }}
+        {{- with .Values.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
@@ -27,8 +30,6 @@ spec:
       serviceAccountName: {{ include "transmission.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      volumes:
-{{ toYaml .Values.volumes | indent 6 }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
@@ -36,25 +37,25 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-{{ toYaml .Values.env | indent 12 }}
+            {{- toYaml .Values.env | nindent 12 }}
           ports:
             - name: http
               containerPort: 9091
               protocol: TCP
           livenessProbe:
-            httpGet:
-              path: /
-              port: http
-            initialDelaySeconds: 20
+            {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
-            httpGet:
-              path: /
-              port: http
-            initialDelaySeconds: 15
+            {{- toYaml .Values.readinessProbe | nindent 12 }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          {{- with .Values.volumeMounts }}
           volumeMounts:
-{{ toYaml .Values.volumeMounts | indent 12 }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      {{- with .Values.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
